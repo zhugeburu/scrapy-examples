@@ -26,10 +26,11 @@ class dmozSpider(CommonSpider):
         "http://www.dmoz.org/",
     ]
     valid_categories = [
-        'Arts', 'Business', 'Computers', 'Games', 'Health', 'Home',
-        'Kids_and_Teens', 'News', 'Recreation', 'Reference', 'Regional', 'Science',
-        'Shopping', 'Society', 'Sports',
+        'Arts'
     ]
+    # , 'Business', 'Computers', 'Games', 'Health', 'Home',
+    #     'Kids_and_Teens', 'News', 'Recreation', 'Reference', 'Regional', 'Science',
+    #     'Shopping', 'Society', 'Sports',
     allow_rules = ['/'+i+'/' for i in valid_categories]
     rules = [
         Rule(sle(allow=allow_rules), callback='parse_1', follow=True),

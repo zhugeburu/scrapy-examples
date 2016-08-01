@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # Define here the models for your scraped items
 #
 # See documentation in:
@@ -5,17 +7,8 @@
 
 from scrapy.item import Item, Field
 
-class qqnewsItem(Item):
+class NeteaseItem(Item):
     # define the fields for your item here like:
-    # name = Field()
-    title = Field()
+    # name = scrapy.Field()
     url = Field()
-    # content = Field()
-
-class PositionDetailItem(Item):
     title = Field()
-    link = Field()
-    sharetitle  = Field()
-    bottomline = Field()
-    duty = Field()
-    xxx = Field()

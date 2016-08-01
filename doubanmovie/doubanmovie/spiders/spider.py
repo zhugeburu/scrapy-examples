@@ -25,13 +25,14 @@ class doubanmovieSpider(CommonSpider):
     allowed_domains = ["douban.com"]
     start_urls = [
         #"https://movie.douban.com/tag/",
-        "https://movie.douban.com/chart"
+        # "https://movie.douban.com/chart"
+        "https://movie.douban.com/"
     ]
     rules = [
         #Rule(sle(allow=("/tag/[0-9]{4}$")), follow=True),
         #Rule(sle(allow=("/tag/[0-9]{4}/?start=[0-9]{2,4}&type=T$")), follow=True),
         #Rule(sle(allow=("/subject/[0-9]+$")), callback='parse_1'),
-        Rule(sle(allow=("/subject/[0-9]+/$")), callback='parse_1', follow=True),
+        Rule(sle(allow=("/subject/[0-9]+/\?from=showing$")), callback='parse_1', follow=True),
     ]
 
     list_css_rules = { 

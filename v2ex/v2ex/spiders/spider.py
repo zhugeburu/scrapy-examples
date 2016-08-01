@@ -34,7 +34,7 @@ class v2exSpider(CommonSpider):
         '.cell.item': {
             'title': '.item_title a::text',
             'node': '.node::text',
-            'author': '.node+ strong a::text',
+            # 'author': '.node+ strong a::text',
             'reply_count': '.count_livid::text'
         }   
     }   
